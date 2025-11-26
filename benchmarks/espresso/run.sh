@@ -1,5 +1,4 @@
 #!/bin/bash
-# Minimal ESPResSo runner for benchmark
 START_TIME=$(date +%s.%N)
 python3 input.py > espresso.log 2>&1
 END_TIME=$(date +%s.%N)

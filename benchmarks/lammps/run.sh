@@ -1,6 +1,4 @@
 #!/bin/bash
-# Minimal LAMMPS benchmark runner
-# Автоопределяем бинарник
 LAMMPS_BIN=$(command -v lmp_serial || command -v lmp_stable || command -v lmp || command -v lammps)
 INPUT_FILE="input.lmp"
 OUTPUT_FILE="log.lammps"

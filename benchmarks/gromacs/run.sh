@@ -1,5 +1,4 @@
 #!/bin/bash
-# Minimal GROMACS runner for benchmark
 GMX_BIN="gmx mdrun"
 INPUT_TPR="input.tpr"
 OUTPUT_LOG="gromacs.log"

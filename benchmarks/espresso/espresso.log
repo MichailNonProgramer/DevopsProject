@@ -1,5 +1,1 @@
-Traceback (most recent call last):
-  File "/workspace/input.py", line 1, in <module>
-    import espressomd
-ModuleNotFoundError: No module named 'espressomd'
 elapsed_time_seconds: .089410005
