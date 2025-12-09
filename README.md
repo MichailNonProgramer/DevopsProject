@@ -19,6 +19,11 @@ README.md      # этот файл
 ---
 ## Быстрый старт (любая ОС, нужен Docker и Python >=3.7 для runner.py)
 
+### 1. Install required packages for runner.py to work correcly
+```bash
+  pip install psutil
+```
+
 ### 1. Сборка Docker-образа
 - LAMMPS:
   ```bash
