@@ -1,35 +1,66 @@
-import sys
-import re
-import os
+import subprocess
+import psutil
+import time
 import json
+import sys
+import os
 
-def parse_time(log):
-    matches = re.findall(r"elapsed_time_seconds:\s*([0-9.]+)", log)
-    if matches:
-        return float(matches[-1])
-    return None
+def metrics(cmd, log_file):
+    start_time = time.time()
+    cpu_max = 0
+    ram_max = 0
 
-def parse_cpu_mem(log):
-    # Placeholder: расширить при необходимости для сбора из топа
-    return None, None
+    with open(log_file, "w") as log:
+        proc = subprocess.Popen(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True
+        )
+
+        p = psutil.Process(proc.pid)
+
+        for line in proc.stdout:
+            log.write(line)
+            try:
+                cpu = p.cpu_percent(interval=0.1)
+                mem = p.memory_info().rss / (1024**2)  # MB
+                cpu_max = max(cpu_max, cpu)
+                ram_max = max(ram_max, mem)
+            except psutil.NoSuchProcess:
+                break
+
+        proc.wait()
+
+    elapsed = time.time() - start_time
+
+    # Append time into log
+    with open(log_file, "a") as lf:
+        lf.write(f"elapsed_time_seconds: {elapsed}\n")
+
+    return {
+        "wall_time_seconds": elapsed,
+        "cpu_percent_max": cpu_max,
+        "ram_mb_max": ram_max
+    }
+
 
 def main():
-    if len(sys.argv) < 3:
-        print("Usage: python metrics.py <log_file> <output_json>")
+    if len(sys.argv) < 4:
+        print("Usage: python metrics.py <output_json> <log_file> <cmd...>")
         sys.exit(1)
-    log_file, output_json = sys.argv[1], sys.argv[2]
-    with open(log_file, 'r') as f:
-        log = f.read()
-    wall_time = parse_time(log)
-    cpu, mem = parse_cpu_mem(log)
-    data = {
-        "wall_time_seconds": wall_time,
-        "cpu_percent_max": cpu,
-        "ram_mb_max": mem
-    }
-    with open(output_json, 'w') as f:
-        json.dump(data, f, indent=2)
-    print(json.dumps(data, indent=2))
+
+    output_json = sys.argv[1]
+    log_file = sys.argv[2]
+    cmd = sys.argv[3:]
+
+    metrics_result = metrics(cmd, log_file)
+
+    with open(output_json, "w") as f:
+        json.dump(metrics_result, f, indent=2)
+
+    print(json.dumps(metrics_result, indent=2))
+
 
 if __name__ == "__main__":
     main()

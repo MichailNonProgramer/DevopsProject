@@ -11,14 +11,14 @@ TPR = "bench.tpr"
 LOG = "gromacs.log"
 
 print("Running grompp")
-subprocess.run(["gmx", "grompp", "-f", MDP, "-c", GRO, "-p", TOP, "-o", TPR, "-maxwarn", "10"], check=True)
+subprocess.run(["gmx", "grompp", "-f", MDP, "-c", GRO, "-p", TOP, "-o", TPR, "-maxwarn", "10", "-nobackup"], check=True)
 
 print("Running mdrun with monitoring")
 with open(LOG, "w") as log_file:
     start_time = time.time()
 
     proc = subprocess.Popen(
-        ["gmx", "mdrun", "-s", TPR, "-nt", "1", "-nb", "cpu", "-nsteps", "100", "-v"],
+        ["gmx", "mdrun", "-s", TPR, "-nt", "1", "-nb", "cpu", "-nsteps", "100", "-v" , "-nobackup"],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True

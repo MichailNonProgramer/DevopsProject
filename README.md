@@ -19,21 +19,18 @@ README.md      # этот файл
 ---
 ## Быстрый старт (любая ОС, нужен Docker и Python >=3.7 для runner.py)
 
-### 1. Сборка Docker-образа и запуск
+### 1. Сборка Docker-образа
 - LAMMPS:
   ```bash
   docker build -f docker/lammps.Dockerfile -t lammps-bench .
-  docker run --rm lammps-bench
   ```
 - GROMACS:
   ```bash
   docker build -f docker/gromacs.Dockerfile -t gromacs-bench .
-  docker run --rm gromacs-bench
   ```
 - ESPResSo:
   ```bash
   docker build -f docker/espresso.Dockerfile -t espresso-bench .
-  docker run --rm espresso-bench
   ```
 
 ### 2. Автоматизация запусков и сбор результатов
@@ -61,9 +58,9 @@ python scripts/runner.py lammps   # Запуск только lammps
 }
 ```
 - `wall_time_seconds` — время выполнения от запуска до окончания симуляции
-- `cpu_percent_max` — maximum CPU usage during simulation (implemented for GROMACS)
-- `ram_mb_max` — maximum RAM usage in MB (implemented for GROMACS)
-Note: CPU and RAM metrics are currently implemented only for GROMACS; other simulators still report null.
+- `cpu_percent_max` — maximum CPU usage during simulation
+- `ram_mb_max` — maximum RAM usage in MB
+
 
 ## FAQ
 - **Q:** Можно ли запускать вручную из-под Windows?  
@@ -71,7 +68,7 @@ Note: CPU and RAM metrics are currently implemented only for GROMACS; other simu
 - **Q:** Как генерировать input.tpr для GROMACS?
   **A:** Необходимо подготовить .gro/.top/.mdp и собрать tpr через gmx grompp (см. оф. инструкции GROMACS).
 - **Q:** How to get CPU/RAM metrics?
-  **A:** CPU and RAM monitoring is now implemented for GROMACS via psutil in run_gromacs.py. You can extend metrics.py similarly for other simulators.
+  **A:** CPU and RAM monitoring is now implemented via psutil.
 
 ---
 Проект открыт для pull request и пожеланий!

@@ -6,7 +6,7 @@ Created orthogonal box = (0.0000000 0.0000000 0.0000000) to (16.795962 16.795962
   1 by 1 by 1 MPI processor grid
 Created 4000 atoms
   using lattice units in orthogonal box = (0.0000000 0.0000000 0.0000000) to (16.795962 16.795962 16.795962)
-  create_atoms CPU = 0.001 seconds
+  create_atoms CPU = 0.002 seconds
 Neighbor list info ...
   update every 20 steps, delay 0 steps, check no
   max neighbors/atom: 2000, page size: 100000
@@ -36,20 +36,20 @@ Step Temp E_pair E_mol TotEng Press
      800    0.7126495   -5.6896853            0   -4.6209783   0.64767087 
      900   0.70152923   -5.6734216            0   -4.6213909   0.68990678 
     1000   0.69622626   -5.6647876            0   -4.6207093   0.77994267 
-Loop time of 2.04202 on 1 procs for 1000 steps with 4000 atoms
+Loop time of 1.6861 on 1 procs for 1000 steps with 4000 atoms
 
-Performance: 211555.740 tau/day, 489.712 timesteps/s
-99.9% CPU use with 1 MPI tasks x 1 OpenMP threads
+Performance: 256211.815 tau/day, 593.083 timesteps/s
+100.0% CPU use with 1 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 1.7229     | 1.7229     | 1.7229     |   0.0 | 84.37
-Neigh   | 0.25699    | 0.25699    | 0.25699    |   0.0 | 12.58
-Comm    | 0.027018   | 0.027018   | 0.027018   |   0.0 |  1.32
-Output  | 0.0015328  | 0.0015328  | 0.0015328  |   0.0 |  0.08
-Modify  | 0.027059   | 0.027059   | 0.027059   |   0.0 |  1.33
-Other   |            | 0.006482   |            |       |  0.32
+Pair    | 1.3723     | 1.3723     | 1.3723     |   0.0 | 81.39
+Neigh   | 0.25831    | 0.25831    | 0.25831    |   0.0 | 15.32
+Comm    | 0.024452   | 0.024452   | 0.024452   |   0.0 |  1.45
+Output  | 0.00048269 | 0.00048269 | 0.00048269 |   0.0 |  0.03
+Modify  | 0.024105   | 0.024105   | 0.024105   |   0.0 |  1.43
+Other   |            | 0.006463   |            |       |  0.38
 
 Nlocal:        4000.00 ave        4000 max        4000 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
@@ -62,7 +62,7 @@ Total # of neighbors = 150090
 Ave neighs/atom = 37.522500
 Neighbor list builds = 50
 Dangerous builds not checked
-Total wall time: 0:00:02
+Total wall time: 0:00:01
  0 0 0
 Nghost:        5456.00 ave        5456 max        5456 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
@@ -73,5 +73,6 @@ Total # of neighbors = 150090
 Ave neighs/atom = 37.522500
 Neighbor list builds = 50
 Dangerous builds not checked
-Total wall time: 0:00:02
-elapsed_time_seconds: 2.784867819
+Total wall time: 0:00:01
+
+elapsed_time_seconds: 9.00067138671875

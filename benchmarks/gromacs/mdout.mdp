@@ -1,8 +1,8 @@
 ;
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (0)
-;	On host: 09ee30c7b3c4
-;	At date: Wed Nov 26 07:25:47 2025
+;	On host: 95a296377c45
+;	At date: Tue Dec  9 20:07:57 2025
 ;
 ;	Created by:
 ;	             :-) GROMACS - gmx grompp, 2021.4-Ubuntu-2021.4-2 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr
 ;	Working dir:  /workspace
 ;	Command line:
-;	  gmx grompp -f rf_verlet.mdp -c conf.gro -p topol.top -o bench.tpr -maxwarn 10
+;	  gmx grompp -f rf_verlet.mdp -c conf.gro -p topol.top -o bench.tpr -maxwarn 10 -nobackup
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.

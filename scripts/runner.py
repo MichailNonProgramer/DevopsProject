@@ -37,6 +37,7 @@ def run_sim(name, sim):
     project_root = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
     benchmarks_path = os.path.join(project_root, "benchmarks")
     workdir_abs = os.path.join(project_root, wd)
+    scripts_abs = os.path.join(project_root, "scripts")
     
     # Запускаем Docker контейнер с монтированием benchmarks директории
     # Используем --rm для автоматического удаления контейнера после выполнения
@@ -52,7 +53,7 @@ def run_sim(name, sim):
     out = subprocess.run(docker_cmd)
     
     log_path = os.path.join(wd, sim["log"])
-    json_metrics_path = os.path.join(wd, "gromacs_metrics.json")
+    json_metrics_path = os.path.join(wd, f"{name}_metrics.json")
     out_json = os.path.join(RESULTS_DIR, f"{name}.json")
     
     if os.path.exists(log_path):

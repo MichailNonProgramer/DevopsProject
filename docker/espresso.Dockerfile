@@ -9,7 +9,8 @@ RUN apt-get update && \
     dpkg-reconfigure -f noninteractive tzdata
 
 # 2. Cython нужной версии
-RUN python3 -m pip install --no-cache-dir --break-system-packages 'Cython>=3.0.4,<3.2.0'
+RUN python3 -m pip install --no-cache-dir --break-system-packages 'Cython>=3.0.4,<3.2.0' psutil
+
 
 # 3. ESPResSo сборка (git clone с настройками для стабильности при нестабильном интернете)
 RUN git config --global http.postBuffer 524288000 && \

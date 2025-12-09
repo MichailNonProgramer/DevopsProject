@@ -1,7 +1,8 @@
 FROM ubuntu:22.04
 LABEL maintainer="your_name_or_project_email"
 RUN apt-get update && \
-    apt-get install -y lammps bc && \
+    apt-get install -y lammps bc python3 python3-pip && \
+    pip3 install psutil && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 WORKDIR /workspace
 COPY ./benchmarks/lammps .

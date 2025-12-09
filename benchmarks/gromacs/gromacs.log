@@ -35,10 +35,8 @@ Executable:   /usr/bin/gmx
 Data prefix:  /usr
 Working dir:  /workspace
 Command line:
-  gmx mdrun -s bench.tpr -nt 1 -nb cpu -nsteps 100 -v
+  gmx mdrun -s bench.tpr -nt 1 -nb cpu -nsteps 100 -v -nobackup
 
-
-Back Off! I just backed up md.log to ./#md.log.4#
 Compiled SIMD: SSE4.1, but for this host/run AVX2_256 might be better (see
 log).
 Reading file bench.tpr, VERSION 2021.4-Ubuntu-2021.4-2 (single precision)
@@ -51,25 +49,21 @@ Using 1 OpenMP thread
 
 
 NOTE: Thread affinity was not set.
-
-Back Off! I just backed up ener.edr to ./#ener.edr.2#
 starting mdrun 'NADP-DEPENDENT ALCOHOL DEHYDROGENASE in water'
 100 steps,      0.2 ps.
 
 step 0
 Writing final coordinates.
 
-Back Off! I just backed up confout.gro to ./#confout.gro.2#
-
 step 100, remaining wall clock time:     0 s          
-NOTE: 13 % of the run time was spent in pair search,
+NOTE: 12 % of the run time was spent in pair search,
       you might want to increase nstlist (this has no effect on accuracy)
 
                Core t (s)   Wall t (s)        (%)
-       Time:       10.861       10.863      100.0
+       Time:       10.823       10.824      100.0
                  (ns/day)    (hour/ns)
-Performance:        1.607       14.938
+Performance:        1.612       14.885
 
-GROMACS reminds you: "I used to be blond and stupid, but now I dyed it black" (Miss Li)
+GROMACS reminds you: "We haven't the money, so we've got to think." (Ernest Rutherford)
 
-elapsed_time_seconds: 12.554033756256104
+elapsed_time_seconds: 12.491060972213745
