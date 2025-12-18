@@ -1,17 +1,17 @@
 {
   "lammps": {
-    "wall_time_seconds": 2.784867819,
-    "cpu_percent_max": null,
-    "ram_mb_max": null
+    "wall_time_seconds": 0.54216648,
+    "cpu_percent_max": 11.0,
+    "ram_mb_max": 27.1484375
   },
   "gromacs": {
-    "wall_time_seconds": 0.16088081,
-    "cpu_percent_max": null,
-    "ram_mb_max": null
+    "wall_time_seconds": 0.127076562,
+    "cpu_percent_max": 21.0,
+    "ram_mb_max": 16.21484375
   },
   "espresso": {
-    "wall_time_seconds": 0.089410005,
-    "cpu_percent_max": null,
-    "ram_mb_max": null
+    "wall_time_seconds": 0.289498006,
+    "cpu_percent_max": 51.0,
+    "ram_mb_max": 10.35546875
   }
 }

@@ -1,0 +1,22 @@
+; Generated from config/common.json
+[ defaults ]
+; nbfunc  comb-rule  gen-pairs  fudgeLJ  fudgeQQ
+1        2          yes        1.0      1.0
+
+[ atomtypes ]
+; name   mass    charge  ptype  sigma   epsilon
+LJ      1.0     0.0     A      1.0  1.0
+
+[ moleculetype ]
+; name  nrexcl
+LJBOX  1
+
+[ atoms ]
+; nr  type  resnr  resname  atom  cgnr  charge  mass
+    1  LJ    1   LJ    LJ1        1  0.0   1.0
+    2  LJ    1   LJ    LJ2        2  0.0   1.0
+[ system ]
+LJ box
+
+[ molecules ]
+LJBOX  1

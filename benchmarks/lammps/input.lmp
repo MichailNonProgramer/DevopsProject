@@ -1,17 +1,24 @@
-# Minimal LAMMPS input for Lennard-Jones (LJ) fluid
+# Generated from config/common.json
 units       lj
 atom_style  atomic
-lattice     fcc 0.8442
-region      box block 0 10 0 10 0 10
+
+# Box and atoms
+region      box block 0 10.0 0 10.0 0 10.0
 create_box  1 box
 create_atoms 1 box
+
+# Mass and velocities
 mass        1 1.0
 velocity    all create 1.44 87287
+
+# LJ interaction
 pair_style  lj/cut 2.5
 pair_coeff  1 1 1.0 1.0 2.5
 neighbor    0.3 bin
 neigh_modify every 20 delay 0 check no
+
+# Integration
 fix         1 all nve
-timestep    0.005
+timestep    0.01
 thermo      100
 run         1000

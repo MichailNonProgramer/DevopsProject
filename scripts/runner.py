@@ -35,17 +35,20 @@ def run_sim(name, sim):
     
     # Получаем абсолютный путь к benchmarks директории
     project_root = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
-    benchmarks_path = os.path.join(project_root, "benchmarks")
     workdir_abs = os.path.join(project_root, wd)
+    config_path = os.path.join(project_root, "config")
     
     # Запускаем Docker контейнер с монтированием benchmarks директории
     # Используем --rm для автоматического удаления контейнера после выполнения
     docker_cmd = [
         "docker", "run", "--rm",
         "-v", f"{workdir_abs}:/workspace",
+        "-v", f"{config_path}:/config:ro",
         "-w", "/workspace",
         docker_image,
-        "bash", sim["run_script"]
+        "bash", "-lc",
+        # Нормализуем CRLF -> LF внутри контейнера и только потом запускаем скрипт
+        "sed -i 's/\\r$//' run.sh && bash run.sh"
     ]
     
     print(f"Running: {' '.join(docker_cmd)}")

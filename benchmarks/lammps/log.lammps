@@ -1,77 +1,32 @@
 LAMMPS (29 Sep 2021 - Update 2)
 OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/comm.cpp:98)
   using 1 OpenMP thread(s) per MPI task
-Lattice spacing in x,y,z = 1.6795962 1.6795962 1.6795962
-Created orthogonal box = (0.0000000 0.0000000 0.0000000) to (16.795962 16.795962 16.795962)
+Created orthogonal box = (0.0000000 0.0000000 0.0000000) to (10.000000 10.000000 10.000000)
   1 by 1 by 1 MPI processor grid
-Created 4000 atoms
-  using lattice units in orthogonal box = (0.0000000 0.0000000 0.0000000) to (16.795962 16.795962 16.795962)
-  create_atoms CPU = 0.001 seconds
-Neighbor list info ...
-  update every 20 steps, delay 0 steps, check no
-  max neighbors/atom: 2000, page size: 100000
-  master list distance cutoff = 2.8
-  ghost atom cutoff = 2.8
-  binsize = 1.4, bins = 12 12 12
-  1 neighbor lists, perpetual/occasional/extra = 1 0 0
-  (1) pair lj/cut, perpetual
-      attributes: half, newton on
-      pair build: half/bin/atomonly/newton
-      stencil: half/bin/3d
-      bin: standard
-Setting up Verlet run ...
-  Unit style    : lj
-  Current step  : 0
-  Time step     : 0.005
-Per MPI rank memory allocation (min/avg/max) = 3.222 | 3.222 | 3.222 Mbytes
-Step Temp E_pair E_mol TotEng Press 
-       0         1.44   -6.7733681            0   -4.6139081   -5.0199732 
-     100   0.75371085   -5.7530755            0   -4.6227919    0.2562022 
-     200   0.74479961   -5.7402901            0     -4.62337   0.33971885 
-     300   0.73902918   -5.7317111            0   -4.6234445   0.38189296 
-     400   0.71843004   -5.7001119            0   -4.6227362    0.5381214 
-     500   0.72046248   -5.7028579            0   -4.6224344   0.55594351 
-     600   0.72158967   -5.7043492            0   -4.6222353   0.55486031 
-     700   0.69963182   -5.6715562            0   -4.6223708    0.7054771 
-     800    0.7126495   -5.6896853            0   -4.6209783   0.64767087 
-     900   0.70152923   -5.6734216            0   -4.6213909   0.68990678 
-    1000   0.69622626   -5.6647876            0   -4.6207093   0.77994267 
-Loop time of 2.04202 on 1 procs for 1000 steps with 4000 atoms
-
-Performance: 211555.740 tau/day, 489.712 timesteps/s
-99.9% CPU use with 1 MPI tasks x 1 OpenMP threads
-
-MPI task timing breakdown:
-Section |  min time  |  avg time  |  max time  |%varavg| %total
----------------------------------------------------------------
-Pair    | 1.7229     | 1.7229     | 1.7229     |   0.0 | 84.37
-Neigh   | 0.25699    | 0.25699    | 0.25699    |   0.0 | 12.58
-Comm    | 0.027018   | 0.027018   | 0.027018   |   0.0 |  1.32
-Output  | 0.0015328  | 0.0015328  | 0.0015328  |   0.0 |  0.08
-Modify  | 0.027059   | 0.027059   | 0.027059   |   0.0 |  1.33
-Other   |            | 0.006482   |            |       |  0.32
-
-Nlocal:        4000.00 ave        4000 max        4000 min
-Histogram: 1 0 0 0 0 0 0 0 0 0
-Nghost:        5456.00 ave        5456 max        5456 min
-Histogram: 1 0 0 0 0 0 0 0 0 0
-Neighs:        150090.0 ave      150090 max      150090 min
-Histogram: 1 0 0 0 0 0 0 0 0 0
-
-Total # of neighbors = 150090
-Ave neighs/atom = 37.522500
-Neighbor list builds = 50
-Dangerous builds not checked
-Total wall time: 0:00:02
- 0 0 0
-Nghost:        5456.00 ave        5456 max        5456 min
-Histogram: 1 0 0 0 0 0 0 0 0 0
-Neighs:        150090.0 ave      150090 max      150090 min
-Histogram: 1 0 0 0 0 0 0 0 0 0
-
-Total # of neighbors = 150090
-Ave neighs/atom = 37.522500
-Neighbor list builds = 50
-Dangerous builds not checked
-Total wall time: 0:00:02
-elapsed_time_seconds: 2.784867819
+ERROR: Cannot create atoms with undefined lattice (src/create_atoms.cpp:311)
+Last command: create_atoms 1 box
+Command exited with non-zero status 1
+	Command being timed: "/usr/bin/lmp -in input.lmp"
+	User time (seconds): 0.01
+	System time (seconds): 0.01
+	Percent of CPU this job got: 11%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 27800
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 2471
+	Voluntary context switches: 1135
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+elapsed_time_seconds: .542166480

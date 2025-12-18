@@ -8,8 +8,11 @@ if [ -z "$LAMMPS_BIN" ]; then
   exit 1
 fi
 
+# Генерируем input.lmp из общего конфига перед запуском
+python3 generate_input.py
+
 START_TIME=$(date +%s.%N)
-$LAMMPS_BIN -in $INPUT_FILE > $OUTPUT_FILE 2>&1
+/usr/bin/time -v "$LAMMPS_BIN" -in "$INPUT_FILE" > "$OUTPUT_FILE" 2>&1
 END_TIME=$(date +%s.%N)
 DURATION=$(echo "$END_TIME - $START_TIME" | bc)
-echo "elapsed_time_seconds: $DURATION" | tee -a $OUTPUT_FILE
+echo "elapsed_time_seconds: $DURATION" | tee -a "$OUTPUT_FILE"
