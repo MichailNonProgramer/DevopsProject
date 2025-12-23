@@ -33,13 +33,10 @@ def run_sim(name, sim):
     wd = sim["workdir"]
     docker_image = sim["docker_image"]
     
-    # Получаем абсолютный путь к benchmarks директории
     project_root = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
     workdir_abs = os.path.join(project_root, wd)
     config_path = os.path.join(project_root, "config")
     
-    # Запускаем Docker контейнер с монтированием benchmarks директории
-    # Используем --rm для автоматического удаления контейнера после выполнения
     docker_cmd = [
         "docker", "run", "--rm",
         "-v", f"{workdir_abs}:/workspace",
@@ -68,7 +65,6 @@ def main():
     sims = sys.argv[1:] if len(sys.argv) > 1 else list(SIMS.keys())
     for sim_name in sims:
         run_sim(sim_name, SIMS[sim_name])
-    # Итоговый сводный файл
     summary = {}
     for sim_name in sims:
         json_path = os.path.join(RESULTS_DIR, f"{sim_name}.json")

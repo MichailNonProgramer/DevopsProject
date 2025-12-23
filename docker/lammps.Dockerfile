@@ -6,6 +6,5 @@ RUN apt-get update && \
 WORKDIR /workspace
 COPY ./config/common.json ./config/common.json
 COPY ./benchmarks/lammps .
-# Нормализуем окончания строк на случай CRLF из Windows
 RUN sed -i 's/\r$//' run.sh && chmod +x run.sh
 CMD ["/bin/bash", "run.sh"]

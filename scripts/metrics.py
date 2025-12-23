@@ -9,7 +9,6 @@ def parse_time(log: str):
     if matches:
         return float(matches[-1])
 
-    # Fallback: Wall clock time из /usr/bin/time -v
     m = re.search(r"Wall clock time \(h:mm:ss or m:ss\):\s*([0-9:]+)", log)
     if m:
         t = m.group(1)
