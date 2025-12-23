@@ -5,8 +5,6 @@ import json
 
 
 def parse_time(log: str):
-    """Парсим собственное поле elapsed_time_seconds или вывод /usr/bin/time -v."""
-    # Наше поле из run.sh
     matches = re.findall(r"elapsed_time_seconds:\s*([0-9.]+)", log)
     if matches:
         return float(matches[-1])
@@ -26,16 +24,13 @@ def parse_time(log: str):
 
 
 def parse_cpu_mem(log: str):
-    """Парсим вывод /usr/bin/time -v: CPU% и максимальную RSS (в МБ)."""
     cpu_percent = None
     ram_mb_max = None
 
-    # Пример строки: "Percent of CPU this job got:  392%"
     m_cpu = re.search(r"Percent of CPU this job got:\s*([0-9.]+)%", log)
     if m_cpu:
         cpu_percent = float(m_cpu.group(1))
 
-    # Пример строки: "Maximum resident set size (kbytes): 123456"
     m_mem = re.search(r"Maximum resident set size \(kbytes\):\s*([0-9]+)", log)
     if m_mem:
         kb = float(m_mem.group(1))
