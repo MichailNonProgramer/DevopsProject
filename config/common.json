@@ -1,5 +1,5 @@
 {
-  "description": "Общий конфиг для минимальных LJ-систем в LAMMPS и ESPResSo",
+  "description": "Общий конфиг для минимальных LJ-систем в LAMMPS и ESPResSo и gromacs",
   "box": [10.0, 10.0, 10.0],
   "time_step": 0.01,
   "n_steps": 1000,

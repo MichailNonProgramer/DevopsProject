@@ -8,7 +8,7 @@ SIMS = {
     "lammps": {
         "workdir": "benchmarks/lammps",
         "run_script": "run.sh",
-        "log": "log.lammps",
+        "log": "lammps.log",
         "docker_image": "lammps-bench"
     },
     "gromacs": {

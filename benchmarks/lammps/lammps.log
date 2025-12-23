@@ -1,0 +1,92 @@
+LAMMPS (29 Sep 2021 - Update 2)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/comm.cpp:98)
+  using 1 OpenMP thread(s) per MPI task
+Created orthogonal box = (0.0000000 0.0000000 0.0000000) to (10.000000 10.000000 10.000000)
+  1 by 1 by 1 MPI processor grid
+Lattice spacing in x,y,z = 1.5874011 1.5874011 1.5874011
+Created 1 atoms
+  using lattice units in orthogonal box = (0.0000000 0.0000000 0.0000000) to (10.000000 10.000000 10.000000)
+  create_atoms CPU = 0.000 seconds
+Created 1 atoms
+  using lattice units in orthogonal box = (0.0000000 0.0000000 0.0000000) to (10.000000 10.000000 10.000000)
+  create_atoms CPU = 0.000 seconds
+Neighbor list info ...
+  update every 20 steps, delay 0 steps, check no
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 2.8
+  ghost atom cutoff = 2.8
+  binsize = 1.4, bins = 8 8 8
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : lj
+  Current step  : 0
+  Time step     : 0.01
+Per MPI rank memory allocation (min/avg/max) = 2.565 | 2.565 | 2.565 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0         1.44   -0.1171875            0    0.9628125    0.0010025 
+     100    1.2942774            0            0   0.97070808 0.0012942774 
+     200    1.2942774            0            0   0.97070808 0.0012942774 
+     300    1.2942774            0            0   0.97070808 0.0012942774 
+     400    1.2942774            0            0   0.97070808 0.0012942774 
+     500    1.2942774            0            0   0.97070808 0.0012942774 
+     600    1.2942774            0            0   0.97070808 0.0012942774 
+     700    1.2942774            0            0   0.97070808 0.0012942774 
+     800    1.2946608 -0.009742589            0   0.96125299 0.0012558821 
+     900    1.5032941  -0.16616257            0   0.96130802 0.00090553861 
+    1000    1.2928602            0            0   0.96964516 0.0012928602 
+Loop time of 0.000626129 on 1 procs for 1000 steps with 2 atoms
+
+Performance: 1379907335.389 tau/day, 1597114.972 timesteps/s
+0.0% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 6.0206e-05 | 6.0206e-05 | 6.0206e-05 |   0.0 |  9.62
+Neigh   | 6.0254e-05 | 6.0254e-05 | 6.0254e-05 |   0.0 |  9.62
+Comm    | 0.00019362 | 0.00019362 | 0.00019362 |   0.0 | 30.92
+Output  | 2.6011e-05 | 2.6011e-05 | 2.6011e-05 |   0.0 |  4.15
+Modify  | 0.00014198 | 0.00014198 | 0.00014198 |   0.0 | 22.68
+Other   |            | 0.0001441  |            |       | 23.01
+
+Nlocal:        2.00000 ave           2 max           2 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:        3.00000 ave           3 max           3 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         0.00000 ave           0 max           0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 0
+Ave neighs/atom = 0.0000000
+Neighbor list builds = 50
+Dangerous builds not checked
+Total wall time: 0:00:00
+	Command being timed: "/usr/bin/lmp -in input.lmp"
+	User time (seconds): 0.00
+	System time (seconds): 0.03
+	Percent of CPU this job got: 10%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31052
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 2600
+	Voluntary context switches: 1170
+	Involuntary context switches: 0
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+elapsed_time_seconds: .526055889

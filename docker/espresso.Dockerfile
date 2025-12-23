@@ -1,5 +1,5 @@
 FROM ubuntu:24.04
-LABEL maintainer="your_name_or_project_email"
+LABEL maintainer="mail"
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
@@ -9,10 +9,7 @@ RUN apt-get update && \
 
 RUN python3 -m pip install --no-cache-dir --break-system-packages 'Cython>=3.0.4,<3.2.0'
 
-RUN git config --global http.postBuffer 524288000 && \
-    git config --global http.lowSpeedLimit 1000 && \
-    git config --global http.lowSpeedTime 60 && \
-    git clone --depth 1 https://github.com/espressomd/espresso.git /opt/espresso
+RUN git clone --depth 1 https://github.com/espressomd/espresso.git /opt/espresso
 RUN cd /opt/espresso && mkdir build && cd build && \
     cmake .. -DWITH_PYTHON=ON && \
     make && \

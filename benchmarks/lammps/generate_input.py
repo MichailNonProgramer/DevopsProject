@@ -22,14 +22,26 @@ def main():
     cutoff = cfg.get("cutoff", 2.5)
 
     x, y, z = box
+    positions = cfg.get("positions", [[5.0, 5.0, 5.0], [6.0, 5.0, 5.0]])
+    
+    # Формируем команды create_atoms для каждой позиции
+    create_atoms_cmds = []
+    for i, pos in enumerate(positions, start=1):
+        px, py, pz = pos
+        create_atoms_cmds.append(f"create_atoms 1 single {px} {py} {pz}")
+    
     content = f"""# Generated from config/common.json
 units       lj
 atom_style  atomic
 
+# Disable LAMMPS default log file (we redirect all output ourselves)
+log         none
+
 # Box and atoms
 region      box block 0 {x} 0 {y} 0 {z}
 create_box  1 box
-create_atoms 1 box
+lattice     fcc 1.0
+{chr(10).join(create_atoms_cmds)}
 
 # Mass and velocities
 mass        1 1.0

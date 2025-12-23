@@ -27,3 +27,8 @@ START_TIME=$(date +%s.%N)
 END_TIME=$(date +%s.%N)
 DURATION=$(echo "$END_TIME - $START_TIME" | bc)
 echo "elapsed_time_seconds: $DURATION" | tee -a "$OUTPUT_LOG"
+
+rm -f input.gro input.mdp input.top input.tpr \
+      confout.gro ener.edr md.log mdout.mdp state.cpt
+
+rm -f "#"*"#" 2>/dev/null || true
