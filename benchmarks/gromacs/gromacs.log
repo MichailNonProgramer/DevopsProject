@@ -56,9 +56,9 @@ NOTE 2 [file input.mdp]:
 
 There were 2 notes
 
-GROMACS reminds you: "A method is more important than a discovery, since the right method will lead to new and even more important discoveries." (Lev Landau)
+GROMACS reminds you: "Scientists do not join hands every Sunday and sing "Yes gravity is real! I know gravity is real! I will have faith! I believe in my heart that what goes up, up, up must come down, down, down. Amen!" If they did, we would think they were pretty insecure about the concept." (Dan Barker)
 
-Setting the LD random seed to -1225262083
+Setting the LD random seed to -11796481
 
 Generated 1 of the 1 non-bonded parameter combinations
 
@@ -131,25 +131,25 @@ starting mdrun 'LJ box'
 Writing final coordinates.
 
                Core t (s)   Wall t (s)        (%)
-       Time:        0.024        0.025       98.0
+       Time:        0.043        0.044       97.8
                  (ns/day)    (hour/ns)
-Performance:    35265.720        0.001
+Performance:    19656.360        0.001
 
-GROMACS reminds you: "As always in life, people want a simple answer... and it's always wrong." (Marie Daly)
+GROMACS reminds you: "I'm not interrupting you, I'm putting our conversation in full-duplex mode." (Antone Roundy)
 
 	Command being timed: "gmx mdrun -s input.tpr -nt 1 -nsteps 1000"
 	User time (seconds): 0.00
-	System time (seconds): 0.01
-	Percent of CPU this job got: 29%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.05
+	System time (seconds): 0.02
+	Percent of CPU this job got: 24%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.08
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 16924
+	Maximum resident set size (kbytes): 16704
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 1189
+	Minor (reclaiming a frame) page faults: 1191
 	Voluntary context switches: 177
 	Involuntary context switches: 0
 	Swaps: 0
@@ -160,4 +160,4 @@ GROMACS reminds you: "As always in life, people want a simple answer... and it's
 	Signals delivered: 0
 	Page size (bytes): 4096
 	Exit status: 0
-elapsed_time_seconds: .059316603
+elapsed_time_seconds: .089079418

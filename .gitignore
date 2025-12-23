@@ -1,0 +1,35 @@
+# Логи бенчмарков
+benchmarks/*/*.log
+benchmarks/*/log.*
+benchmarks/*/*.lammps
+benchmarks/*/*.gro
+benchmarks/*/*.edr
+benchmarks/*/*.cpt
+benchmarks/*/*.tpr
+benchmarks/*/*.mdp
+benchmarks/*/*.top
+benchmarks/*/md.log
+benchmarks/*/mdout.mdp
+benchmarks/*/state.cpt
+benchmarks/*/confout.gro
+benchmarks/*/ener.edr
+benchmarks/*/input.lmp
+
+# Backup файлы GROMACS
+benchmarks/*/#*#
+
+# Результаты замеров (JSON метрики)
+results/*.json
+
+# Python кэш
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Временные файлы
+*.swp
+*.swo
+*~
+.DS_Store
+
