@@ -56,9 +56,9 @@ NOTE 2 [file input.mdp]:
 
 There were 2 notes
 
-GROMACS reminds you: "Scientists do not join hands every Sunday and sing "Yes gravity is real! I know gravity is real! I will have faith! I believe in my heart that what goes up, up, up must come down, down, down. Amen!" If they did, we would think they were pretty insecure about the concept." (Dan Barker)
+GROMACS reminds you: "It seems likely that significant software contributions to existing scientific software projects are not likely to be rewarded through the traditional reputation economy of science. Together these factors provide a reason to expect the over-production of independent scientific software packages, and the underproduction of collaborative projects in which later academics build on the work of earlier ones." (Howison & Herbsleb)
 
-Setting the LD random seed to -11796481
+Setting the LD random seed to -34341525
 
 Generated 1 of the 1 non-bonded parameter combinations
 
@@ -131,25 +131,25 @@ starting mdrun 'LJ box'
 Writing final coordinates.
 
                Core t (s)   Wall t (s)        (%)
-       Time:        0.043        0.044       97.8
+       Time:        0.077        0.078       98.7
                  (ns/day)    (hour/ns)
-Performance:    19656.360        0.001
+Performance:    11152.350        0.002
 
-GROMACS reminds you: "I'm not interrupting you, I'm putting our conversation in full-duplex mode." (Antone Roundy)
+GROMACS reminds you: "It seems likely that significant software contributions to existing scientific software projects are not likely to be rewarded through the traditional reputation economy of science. Together these factors provide a reason to expect the over-production of independent scientific software packages, and the underproduction of collaborative projects in which later academics build on the work of earlier ones." (Howison & Herbsleb)
 
 	Command being timed: "gmx mdrun -s input.tpr -nt 1 -nsteps 1000"
-	User time (seconds): 0.00
-	System time (seconds): 0.02
-	Percent of CPU this job got: 24%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.08
+	User time (seconds): 0.02
+	System time (seconds): 0.01
+	Percent of CPU this job got: 22%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.14
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 16704
+	Maximum resident set size (kbytes): 16484
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 1191
+	Minor (reclaiming a frame) page faults: 1183
 	Voluntary context switches: 177
 	Involuntary context switches: 0
 	Swaps: 0
@@ -160,4 +160,4 @@ GROMACS reminds you: "I'm not interrupting you, I'm putting our conversation in 
 	Signals delivered: 0
 	Page size (bytes): 4096
 	Exit status: 0
-elapsed_time_seconds: .089079418
+elapsed_time_seconds: .147732842

@@ -36,17 +36,12 @@ system.non_bonded_inter[0, 0].lennard_jones.set_params(
     epsilon=epsilon, sigma=sigma, cutoff=cutoff, shift="auto"
 )
 
-# В актуальных версиях ESPResSo интеграторы находятся в espressomd.integrate
-from espressomd import integrate
-
-# VelocityVerlet в новой API не принимает system в конструктор,
-# система уже выбрана глобально при создании espressomd.System.
-integrator = integrate.VelocityVerlet()
+# Используем встроенный интегратор системы (VelocityVerlet по умолчанию)
 
 # Чтобы не засорять лог, выводим энергию не на каждом шаге,
 # а примерно 10 раз за всю траекторию + последний шаг.
 print_interval = max(1, n_steps // 10)
 for i in range(n_steps):
-    integrator.run(1)
+    system.integrator.run(1)
     if i % print_interval == 0 or i == n_steps - 1:
         print(f"step {i}", system.analysis.energy())

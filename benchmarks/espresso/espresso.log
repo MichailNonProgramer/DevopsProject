@@ -1,43 +1,29 @@
-[d7745623291e:00012] *** Process received signal ***
-[d7745623291e:00012] Signal: Segmentation fault (11)
-[d7745623291e:00012] Signal code: Address not mapped (1)
-[d7745623291e:00012] Failing at address: 0xb0
-[d7745623291e:00012] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x45330)[0x7f7d6caee330]
-[d7745623291e:00012] [ 1] /usr/local/lib/python3.12/site-packages/espressomd/espresso_core.so(_ZN6System6System29integrate_with_signal_handlerEiib+0x83)[0x7f7d6c5e8db3]
-[d7745623291e:00012] [ 2] /usr/local/lib/python3.12/site-packages/espressomd/espresso_script_interface.so(_ZN15ScriptInterface11Integrators10Integrator9integrateERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_4impl17recursive_variantIJNS_4NoneEbimdS8_NSt10filesystem7__cxx114pathESt10shared_ptrINS_12ObjectHandleEEN5Utils6VectorIbLm3EEENSJ_IiLm3EEENSJ_IdLm2EEENSJ_IdLm3EEENSJ_IdLm4EEESt6vectorIiSaIiEESP_IdSaIdEEEEESt4hashIS8_ESt8equal_toIS8_ESaISt4pairIKS8_SU_EEE+0x243)[0x7f7d6af79ce3]
-[d7745623291e:00012] [ 3] /usr/local/lib/python3.12/site-packages/espressomd/espresso_script_interface.so(_ZN15ScriptInterface11Integrators10Integrator14do_call_methodERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_mapIS7_NS_4impl17recursive_variantIJNS_4NoneEbimdS7_NSt10filesystem7__cxx114pathESt10shared_ptrINS_12ObjectHandleEEN5Utils6VectorIbLm3EEENSL_IiLm3EEENSL_IdLm2EEENSL_IdLm3EEENSL_IdLm4EEESt6vectorIiSaIiEESR_IdSaIdEEEEESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIS8_SW_EEE+0x6a)[0x7f7d6af77e5a]
-[d7745623291e:00012] [ 4] /usr/local/lib/python3.12/site-packages/espressomd/espresso_script_interface.so(_ZN15ScriptInterface12ObjectHandle11call_methodERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_mapIS6_NS_4impl17recursive_variantIJNS_4NoneEbimdS6_NSt10filesystem7__cxx114pathESt10shared_ptrIS0_EN5Utils6VectorIbLm3EEENSJ_IiLm3EEENSJ_IdLm2EEENSJ_IdLm3EEENSJ_IdLm4EEESt6vectorIiSaIiEESP_IdSaIdEEEEESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIS7_SU_EEE+0x7e)[0x7f7d6ae9ff5e]
-[d7745623291e:00012] [ 5] /usr/local/lib/python3.12/site-packages/espressomd/script_interface.so(+0xb935d)[0x7f7d6b3db35d]
-[d7745623291e:00012] [ 6] /usr/local/lib/python3.12/site-packages/espressomd/script_interface.so(+0xb97ba)[0x7f7d6b3db7ba]
-[d7745623291e:00012] [ 7] /usr/bin/python3(PyObject_Vectorcall+0x35)[0x549825]
-[d7745623291e:00012] [ 8] /usr/bin/python3(_PyEval_EvalFrameDefault+0xa89)[0x5d71d9]
-[d7745623291e:00012] [ 9] /usr/bin/python3(PyEval_EvalCode+0x15b)[0x5d571b]
-[d7745623291e:00012] [10] /usr/bin/python3[0x6084c2]
-[d7745623291e:00012] [11] /usr/bin/python3[0x6b44f3]
-[d7745623291e:00012] [12] /usr/bin/python3(_PyRun_SimpleFileObject+0x1aa)[0x6b425a]
-[d7745623291e:00012] [13] /usr/bin/python3(_PyRun_AnyFileObject+0x4f)[0x6b408f]
-[d7745623291e:00012] [14] /usr/bin/python3(Py_RunMain+0x3b5)[0x6bc0f5]
-[d7745623291e:00012] [15] /usr/bin/python3(Py_BytesMain+0x2d)[0x6bbbdd]
-[d7745623291e:00012] [16] /lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca)[0x7f7d6cad31ca]
-[d7745623291e:00012] [17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b)[0x7f7d6cad328b]
-[d7745623291e:00012] [18] /usr/bin/python3(_start+0x25)[0x657005]
-[d7745623291e:00012] *** End of error message ***
-Command terminated by signal 11
+step 0 {'bonded': 0.0, 'non_bonded_intra': -0.039986696905723075, 'non_bonded_inter': 0.0, ('dipolar', 1): 0.0, ('dipolar', 0): 0.0, ('coulomb', 0): 0.0, ('non_bonded_inter', 0, 0): 0.0, ('non_bonded', 0, 0): -0.039986696905723075, ('coulomb', 1): 0.0, 'kinetic': 0.055052686035099115, 'total': 0.01506598912937604, 'external_fields': 0.0, ('non_bonded_intra', 0, 0): -0.039986696905723075, 'kinetic_rot': 0.0, ('dpd', 0): 0.0, ('virtual_sites', 0): 0.0, 'kinetic_lin': 0.055052686035099115, 'non_bonded': -0.039986696905723075, 'coulomb': 0.0, 'dipolar': 0.0, 'virtual_sites': 0.0, 'dpd': 0.0}
+step 100 {'bonded': 0.0, 'non_bonded_intra': -0.048370209988418365, 'non_bonded_inter': 0.0, ('dipolar', 1): 0.0, ('dipolar', 0): 0.0, ('coulomb', 0): 0.0, ('non_bonded_inter', 0, 0): 0.0, ('non_bonded', 0, 0): -0.048370209988418365, ('coulomb', 1): 0.0, 'kinetic': 0.05984393495102252, 'total': 0.011473724962604154, 'external_fields': 0.0, ('non_bonded_intra', 0, 0): -0.048370209988418365, 'kinetic_rot': 0.0, ('dpd', 0): 0.0, ('virtual_sites', 0): 0.0, 'kinetic_lin': 0.05984393495102252, 'non_bonded': -0.048370209988418365, 'coulomb': 0.0, 'dipolar': 0.0, 'virtual_sites': 0.0, 'dpd': 0.0}
+step 200 {'bonded': 0.0, 'non_bonded_intra': -0.007568775963101893, 'non_bonded_inter': 0.0, ('dipolar', 1): 0.0, ('dipolar', 0): 0.0, ('coulomb', 0): 0.0, ('non_bonded_inter', 0, 0): 0.0, ('non_bonded', 0, 0): -0.007568775963101893, ('coulomb', 1): 0.0, 'kinetic': 0.01904102137233509, 'total': 0.011472245409233198, 'external_fields': 0.0, ('non_bonded_intra', 0, 0): -0.007568775963101893, 'kinetic_rot': 0.0, ('dpd', 0): 0.0, ('virtual_sites', 0): 0.0, 'kinetic_lin': 0.01904102137233509, 'non_bonded': -0.007568775963101893, 'coulomb': 0.0, 'dipolar': 0.0, 'virtual_sites': 0.0, 'dpd': 0.0}
+step 300 {'bonded': 0.0, 'non_bonded_intra': 0.0, 'non_bonded_inter': 0.0, ('dipolar', 1): 0.0, ('dipolar', 0): 0.0, ('coulomb', 0): 0.0, ('non_bonded_inter', 0, 0): 0.0, ('non_bonded', 0, 0): 0.0, ('coulomb', 1): 0.0, 'kinetic': 0.011486068485562027, 'total': 0.011486068485562027, 'external_fields': 0.0, ('non_bonded_intra', 0, 0): 0.0, 'kinetic_rot': 0.0, ('dpd', 0): 0.0, ('virtual_sites', 0): 0.0, 'kinetic_lin': 0.011486068485562027, 'non_bonded': 0.0, 'coulomb': 0.0, 'dipolar': 0.0, 'virtual_sites': 0.0, 'dpd': 0.0}
+step 400 {'bonded': 0.0, 'non_bonded_intra': 0.0, 'non_bonded_inter': 0.0, ('dipolar', 1): 0.0, ('dipolar', 0): 0.0, ('coulomb', 0): 0.0, ('non_bonded_inter', 0, 0): 0.0, ('non_bonded', 0, 0): 0.0, ('coulomb', 1): 0.0, 'kinetic': 0.011486068485562027, 'total': 0.011486068485562027, 'external_fields': 0.0, ('non_bonded_intra', 0, 0): 0.0, 'kinetic_rot': 0.0, ('dpd', 0): 0.0, ('virtual_sites', 0): 0.0, 'kinetic_lin': 0.011486068485562027, 'non_bonded': 0.0, 'coulomb': 0.0, 'dipolar': 0.0, 'virtual_sites': 0.0, 'dpd': 0.0}
+step 500 {'bonded': 0.0, 'non_bonded_intra': 0.0, 'non_bonded_inter': 0.0, ('dipolar', 1): 0.0, ('dipolar', 0): 0.0, ('coulomb', 0): 0.0, ('non_bonded_inter', 0, 0): 0.0, ('non_bonded', 0, 0): 0.0, ('coulomb', 1): 0.0, 'kinetic': 0.011486068485562027, 'total': 0.011486068485562027, 'external_fields': 0.0, ('non_bonded_intra', 0, 0): 0.0, 'kinetic_rot': 0.0, ('dpd', 0): 0.0, ('virtual_sites', 0): 0.0, 'kinetic_lin': 0.011486068485562027, 'non_bonded': 0.0, 'coulomb': 0.0, 'dipolar': 0.0, 'virtual_sites': 0.0, 'dpd': 0.0}
+step 600 {'bonded': 0.0, 'non_bonded_intra': 0.0, 'non_bonded_inter': 0.0, ('dipolar', 1): 0.0, ('dipolar', 0): 0.0, ('coulomb', 0): 0.0, ('non_bonded_inter', 0, 0): 0.0, ('non_bonded', 0, 0): 0.0, ('coulomb', 1): 0.0, 'kinetic': 0.011486068485562027, 'total': 0.011486068485562027, 'external_fields': 0.0, ('non_bonded_intra', 0, 0): 0.0, 'kinetic_rot': 0.0, ('dpd', 0): 0.0, ('virtual_sites', 0): 0.0, 'kinetic_lin': 0.011486068485562027, 'non_bonded': 0.0, 'coulomb': 0.0, 'dipolar': 0.0, 'virtual_sites': 0.0, 'dpd': 0.0}
+step 700 {'bonded': 0.0, 'non_bonded_intra': 0.0, 'non_bonded_inter': 0.0, ('dipolar', 1): 0.0, ('dipolar', 0): 0.0, ('coulomb', 0): 0.0, ('non_bonded_inter', 0, 0): 0.0, ('non_bonded', 0, 0): 0.0, ('coulomb', 1): 0.0, 'kinetic': 0.011486068485562027, 'total': 0.011486068485562027, 'external_fields': 0.0, ('non_bonded_intra', 0, 0): 0.0, 'kinetic_rot': 0.0, ('dpd', 0): 0.0, ('virtual_sites', 0): 0.0, 'kinetic_lin': 0.011486068485562027, 'non_bonded': 0.0, 'coulomb': 0.0, 'dipolar': 0.0, 'virtual_sites': 0.0, 'dpd': 0.0}
+step 800 {'bonded': 0.0, 'non_bonded_intra': 0.0, 'non_bonded_inter': 0.0, ('dipolar', 1): 0.0, ('dipolar', 0): 0.0, ('coulomb', 0): 0.0, ('non_bonded_inter', 0, 0): 0.0, ('non_bonded', 0, 0): 0.0, ('coulomb', 1): 0.0, 'kinetic': 0.011486068485562027, 'total': 0.011486068485562027, 'external_fields': 0.0, ('non_bonded_intra', 0, 0): 0.0, 'kinetic_rot': 0.0, ('dpd', 0): 0.0, ('virtual_sites', 0): 0.0, 'kinetic_lin': 0.011486068485562027, 'non_bonded': 0.0, 'coulomb': 0.0, 'dipolar': 0.0, 'virtual_sites': 0.0, 'dpd': 0.0}
+step 900 {'bonded': 0.0, 'non_bonded_intra': 0.0, 'non_bonded_inter': 0.0, ('dipolar', 1): 0.0, ('dipolar', 0): 0.0, ('coulomb', 0): 0.0, ('non_bonded_inter', 0, 0): 0.0, ('non_bonded', 0, 0): 0.0, ('coulomb', 1): 0.0, 'kinetic': 0.011486068485562027, 'total': 0.011486068485562027, 'external_fields': 0.0, ('non_bonded_intra', 0, 0): 0.0, 'kinetic_rot': 0.0, ('dpd', 0): 0.0, ('virtual_sites', 0): 0.0, 'kinetic_lin': 0.011486068485562027, 'non_bonded': 0.0, 'coulomb': 0.0, 'dipolar': 0.0, 'virtual_sites': 0.0, 'dpd': 0.0}
+step 999 {'bonded': 0.0, 'non_bonded_intra': 0.0, 'non_bonded_inter': 0.0, ('dipolar', 1): 0.0, ('dipolar', 0): 0.0, ('coulomb', 0): 0.0, ('non_bonded_inter', 0, 0): 0.0, ('non_bonded', 0, 0): 0.0, ('coulomb', 1): 0.0, 'kinetic': 0.011486068485562027, 'total': 0.011486068485562027, 'external_fields': 0.0, ('non_bonded_intra', 0, 0): 0.0, 'kinetic_rot': 0.0, ('dpd', 0): 0.0, ('virtual_sites', 0): 0.0, 'kinetic_lin': 0.011486068485562027, 'non_bonded': 0.0, 'coulomb': 0.0, 'dipolar': 0.0, 'virtual_sites': 0.0, 'dpd': 0.0}
 	Command being timed: "pypresso input.py"
-	User time (seconds): 0.24
-	System time (seconds): 0.04
-	Percent of CPU this job got: 42%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.66
+	User time (seconds): 0.35
+	System time (seconds): 0.06
+	Percent of CPU this job got: 54%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.76
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 65808
+	Maximum resident set size (kbytes): 65056
 	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 4
-	Minor (reclaiming a frame) page faults: 8683
-	Voluntary context switches: 1281
-	Involuntary context switches: 3
+	Major (requiring I/O) page faults: 7
+	Minor (reclaiming a frame) page faults: 11299
+	Voluntary context switches: 1120
+	Involuntary context switches: 9
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 616
@@ -46,4 +32,4 @@ Command terminated by signal 11
 	Signals delivered: 0
 	Page size (bytes): 4096
 	Exit status: 0
-elapsed_time_seconds: 1.295033673
+elapsed_time_seconds: 1.052388109

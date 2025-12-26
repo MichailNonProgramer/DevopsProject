@@ -39,20 +39,20 @@ Step Temp E_pair E_mol TotEng Press
      800    1.2946608 -0.009742589            0   0.96125299 0.0012558821 
      900    1.5032941  -0.16616257            0   0.96130802 0.00090553861 
     1000    1.2928602            0            0   0.96964516 0.0012928602 
-Loop time of 0.00106196 on 1 procs for 1000 steps with 2 atoms
+Loop time of 0.000793779 on 1 procs for 1000 steps with 2 atoms
 
-Performance: 813588433.484 tau/day, 941653.279 timesteps/s
-40.0% CPU use with 1 MPI tasks x 1 OpenMP threads
+Performance: 1088464169.498 tau/day, 1259796.492 timesteps/s
+59.8% CPU use with 1 MPI tasks x 1 OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 0.00010118 | 0.00010118 | 0.00010118 |   0.0 |  9.53
-Neigh   | 0.00010607 | 0.00010607 | 0.00010607 |   0.0 |  9.99
-Comm    | 0.00033282 | 0.00033282 | 0.00033282 |   0.0 | 31.34
-Output  | 4.6589e-05 | 4.6589e-05 | 4.6589e-05 |   0.0 |  4.39
-Modify  | 0.00022955 | 0.00022955 | 0.00022955 |   0.0 | 21.62
-Other   |            | 0.0002458  |            |       | 23.14
+Pair    | 7.5743e-05 | 7.5743e-05 | 7.5743e-05 |   0.0 |  9.54
+Neigh   | 8.2913e-05 | 8.2913e-05 | 8.2913e-05 |   0.0 | 10.45
+Comm    | 0.00024477 | 0.00024477 | 0.00024477 |   0.0 | 30.84
+Output  | 4.0232e-05 | 4.0232e-05 | 4.0232e-05 |   0.0 |  5.07
+Modify  | 0.00016594 | 0.00016594 | 0.00016594 |   0.0 | 20.90
+Other   |            | 0.0001842  |            |       | 23.20
 
 Nlocal:        2.00000 ave           2 max           2 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
@@ -67,19 +67,19 @@ Neighbor list builds = 50
 Dangerous builds not checked
 Total wall time: 0:00:00
 	Command being timed: "/usr/bin/lmp -in input.lmp"
-	User time (seconds): 0.02
-	System time (seconds): 0.04
+	User time (seconds): 0.04
+	System time (seconds): 0.02
 	Percent of CPU this job got: 16%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.41
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.40
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 29020
+	Maximum resident set size (kbytes): 28680
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 2
-	Minor (reclaiming a frame) page faults: 2603
-	Voluntary context switches: 1089
+	Minor (reclaiming a frame) page faults: 2595
+	Voluntary context switches: 1065
 	Involuntary context switches: 1
 	Swaps: 0
 	File system inputs: 0
@@ -89,4 +89,4 @@ Total wall time: 0:00:00
 	Signals delivered: 0
 	Page size (bytes): 4096
 	Exit status: 0
-elapsed_time_seconds: .950939310
+elapsed_time_seconds: .683277304
