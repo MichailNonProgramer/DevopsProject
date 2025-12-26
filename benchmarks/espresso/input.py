@@ -36,10 +36,6 @@ system.non_bonded_inter[0, 0].lennard_jones.set_params(
     epsilon=epsilon, sigma=sigma, cutoff=cutoff, shift="auto"
 )
 
-# Используем встроенный интегратор системы (VelocityVerlet по умолчанию)
-
-# Чтобы не засорять лог, выводим энергию не на каждом шаге,
-# а примерно 10 раз за всю траекторию + последний шаг.
 print_interval = max(1, n_steps // 10)
 for i in range(n_steps):
     system.integrator.run(1)
